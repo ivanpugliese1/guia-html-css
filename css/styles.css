@@ -1,0 +1,425 @@
+html {
+  font-family: "Onest", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/** SELECTORES **/
+
+/* Clases */
+.faltante {
+  color: red;
+}
+
+/* Identificador unico */
+#item-secreto {
+  color: green;
+}
+
+/** FUENTES **/
+
+p {
+  /* font-family: "Tahoma", sans-serif; */
+
+  font-size: 20px;
+
+  /* font-weight: bold; */
+
+  /* font-style: italic; */
+  /* font-style: oblique; */
+  font-style: normal;
+
+  text-align: left;
+  text-align: right;
+  text-align: center;
+  text-align: justify;
+
+  text-decoration: underline;
+  text-decoration: overline;
+  text-decoration: overline underline;
+  text-decoration: line-through; /* Tachar */
+  text-decoration: none;
+
+  line-height: normal; /* Espaciado entre líneas */
+  line-height: 1.5;
+  line-height: normal;
+
+  letter-spacing: 10px; /* Espaciado entre letras */
+  letter-spacing: normal;
+
+  text-transform: uppercase;
+  text-transform: lowercase;
+  text-transform: capitalize;
+  text-transform: none;
+}
+
+/* MODELO DE CAJA*/
+
+/* El margen no forma parte de la caja
+   Padding, border y contenido si. 
+*/
+
+.box {
+  margin-bottom: 1rem; /* Espacio entre cajas, es externo */
+  padding: 1rem; /* Espacio entre el contenido y el borde de una caja, relleno. */
+  background-color: red;
+  width: 300px;
+  height: 100px;
+}
+
+.form {
+  padding: 1rem;
+  background-color: blueviolet;
+}
+
+.form-input {
+  padding: 0.2rem;
+  width: 100%;
+}
+
+.form-button {
+  width: 50%;
+  background-color: red;
+  color: white;
+}
+
+/* BORDES */
+
+.box-border {
+  background-color: red;
+  width: 200px;
+  margin: auto;
+  text-align: center;
+
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 0.5rem;
+  border-top: solid black 10px;
+  border-bottom: dashed darkcyan 4px;
+}
+
+/* Existe el margin-collapse, en margenes verticales, el margen mas grande es el que predomina */
+
+/* BORDER y CONTENT BOX */
+
+.box-border-content {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 10px;
+}
+
+.box-default {
+  padding: 25px;
+  border: 10px solid black;
+}
+
+.new-box {
+  box-sizing: border-box; /* Que el contenido se adapte */
+  padding: 25px;
+  border: 10px solid black;
+}
+
+/* COLORES */
+
+.box-colors {
+  width: 100px;
+  height: 100px;
+  background-color: #ff6600; /* Hexadecimal */
+  background-color: #00000055; /* Con opacidad */
+  background-color: rgb(
+    255,
+    102,
+    0
+  ); /* RGB - Bit (0/1) 2 elevado a la potencia 8 = 2*2*2*2*2*2*2*2 = 256 
+  Por cada canal de color tenemos valores que van del 0 al 255*/
+  background-color: rgba(0, 0, 0, 0.92); /* Con opacidad */
+  background-color: hsl(
+    0,
+    0%,
+    100%
+  ); /* Sistema HSl HueSaturationLightness (Tono-Saturación-Luminosidad) El primer es Hue (Círculo Cromático)
+  0° -> red
+  60° -> yellow
+  120° -> green
+  180° -> cyan
+  240° -> blue
+  300° -> magenta
+
+El segundo valor es Saturation (Intensidad del Color)
+  0% -> Escala de grises
+  100% -> Color puro
+
+El tercer valor es Lightness (Luminosidad del Color)
+  0% -> negro
+  50% -> color puro
+  100% -> blanco */
+  background-color: hsla(30, 100%, 50%, 0.25); /* Con opacidad */
+}
+
+/* 
+Valor transparent: color transparente es igual a aplicar rgba(0,0,0,0)
+Valor currentColor: Hereda el valor por defecto o asignado de la propiedad color, del ancestro que tenga definida esta propiedad, busca del ancestro más cercano al más alejado
+*/
+
+/* UNIDADES DE MEDIDA */
+
+/* 
+Unidades de Medida
+  1) Absolutas (Su valor no cambia, son unidades del mundo real)
+    pc, cm, mm, in, Q
+    pt (1/72in)
+    px (1/96in)
+  2) Relativas (Su valor es relativo a un contexto)
+    em, rem, ex, ch - al tamaño de la fuente
+      em - basada en la anchura de la "m" de la fuente del elemento
+      rem -  basada en la anchura de la "m" de la fuente del elemento raíz (html)
+      ex - basada en la altura de la "x" de la fuente del elemento
+      ch - basada en la anchura del "0" de la fuente del elemento
+    % - al tamaño del contenedor
+    vw, vh, vmin, vmax - al tamaño del viewport
+      vw - ancho del viewport van de 1 a 100
+      vh - alto del viewport van de 1 a 100
+      vmax - entre vw y vh toma el que tenga mayor valor
+      vmin - entre vw y vh toma el que tenga menor valor
+
+  Conversiones entre unidades - https://pxtoem.com/
+
+  PARA TAMAÑOS FUENTE, ESPACIADO, TIPOGRAFIA EN GENERAL : EM, REMS
+  PARA LAYOUTS O DIMNESIONES DE ELEMENTOS: PORCENTAJES, EM, REMS
+*/
+
+.box-units {
+  margin: 1rem;
+  background-color: #ededed;
+  font-family: sans-serif;
+  border-left: 5px solid #999;
+}
+
+.box-units h1 {
+  margin: 0;
+}
+
+.box-units span {
+  color: #999;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.pixels {
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  font-size: 32px;
+}
+
+.ems {
+  font-size: 24px;
+  padding: 1em 0.5em;
+}
+
+.em-child {
+  background-color: salmon;
+  border: thick solid beige;
+  margin: 0.5em;
+  padding: 1em;
+  font-size: 2em;
+}
+
+.rems {
+  font-size: 24px;
+  padding: 1rem 0.5rem;
+}
+
+.rem-child {
+  background-color: salmon;
+  border: thick solid beige;
+  margin: 0.5rem;
+  padding: 1rem;
+  font-size: 2rem; /* Ignora el font-size */
+}
+
+.exs {
+  font-size: 24px;
+  padding: 1ex 0.5ex;
+}
+
+.ex-child {
+  background-color: salmon;
+  border: thick solid beige;
+  margin: 0.5ex;
+  padding: 1ex;
+  font-size: 2ex;
+}
+
+.chs {
+  margin: 0;
+  padding: 0;
+  background-color: cadetblue;
+  width: 10ch;
+}
+
+.percentages {
+  padding: 5%;
+  margin: 15% 10%;
+  width: 80%;
+  font-size: 100%; /* sera siempre de 16px o del font-size del contenedor padre*/
+  height: 100%;
+}
+
+.height-parent {
+  background-color: brown;
+  width: 500px;
+  height: 500px;
+  font-size: 24px;
+}
+
+.height-child {
+  background-color: coral;
+  width: 50%;
+  height: 50%;
+  font-size: 50%;
+}
+
+.viewport {
+  width: 50vw;
+  /* Recuerda que la etiqueta body tiene margenes por defecto y recuerda que las barras de scroll del navegador también forman parte del viewport */
+  width: 100%;
+  width: 100vw;
+  height: 50vh;
+  height: 100vh;
+  font-size: 5vw;
+  padding: 2vw 2vh;
+}
+
+/* BACKGROUNDS */
+
+.box-background {
+  width: 300px;
+  height: 200px;
+}
+
+.color {
+  background-color: pink;
+}
+
+.image {
+  z-index: 999;
+  width: 100%;
+  height: 600px;
+  background-image: url("https://scontent.fepa9-2.fna.fbcdn.net/v/t39.30808-6/431351105_8324892264194807_8182465499493902928_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=gqfYc3Gpm6QAX9_9qMq&_nc_oc=AdhzYakBU1SoXpveAoowdSAh5u08yDKNHK5Wg_dAxyAKbp2jom7nUCklyhABqplh0jE&_nc_ht=scontent.fepa9-2.fna&oh=00_AfAmIxipgrVmCA3tJTNv_-kKdc2m89PZHg2iqNNkmENhJg&oe=65FFB80D");
+  background-size: contain; /* Obliga al contenedor a que la imagen entre, a que se adapte, que en el espacio que le dimos, la imagen entre al menos una vez */
+  background-size: cover; /* No importa la dimension, que se ajuste a la dimension que tiene que tener */
+  background-position: center; /* Dependiendo de lo que tengamos, llevar la imagen a donde queremos, top , left , right, bottom */
+  background-repeat: no-repeat; /* repet-y repeat-x , se usa mas que nada en conjunto con contain, con cover solo si se mueve con position para algun lado */
+  background-attachment: fixed;
+}
+
+.image-opacity {
+  width: 100%;
+  height: 100%;
+  background-color: #000a;
+}
+
+/* GRADIENTES */
+
+.box-gradients {
+  width: 400px;
+  height: 400px;
+}
+
+.lineal {
+  background: linear-gradient(#000a, transparent);
+  background: linear-gradient(
+    to right,
+    #000,
+    transparent
+  ); /* Arranca a la derecha hacia izquierda, viceversa arranca a la izquierda y va hacia la derecha*/
+  /* tambien podemos definir el porcentaje de cada color o transparencia */
+}
+
+.conic {
+  background: conic-gradient(blue, #000a);
+}
+
+.radial {
+  background: radial-gradient(green, #000a);
+}
+
+/* SOMBRAS */
+
+.box-shadow {
+  padding: 20px;
+  margin: 1rem auto;
+  width: 300px;
+  height: auto;
+  background-color: cadetblue;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  text-align: center;
+
+  box-shadow: 0px 0px 30px 0px #000; /* El primer parametro es el movimiento horizontal , el segundo es el movimiento vertical, el tercero es el desenfoque, y el cuarto es la extension , despues el color. El parametro que destaca es el desenfoque */
+}
+
+.box-shadow h3 {
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 20px;
+}
+
+.box-shadow p {
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.4;
+  text-shadow: 0 0 4px #f88;
+}
+
+.shadow-img {
+  padding-bottom: 1rem;
+  width: 200px;
+  border-radius: 100%;
+  filter: drop-shadow(
+    0px 0px 10px #000
+  ); /* para imagenes png , con canal alfa o fondo transparente */
+}
+
+/* EJERCICIO CSS Básico */
+
+.card {
+  width: 400px;
+  color: whitesmoke;
+  background-color: cadetblue;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.card h1 {
+  padding-top: 10px;
+}
+
+.card h2 {
+  font-size: 22px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.card p {
+  padding: 20px;
+  font-size: 17px;
+  background-color: burlywood;
+  text-align: justify;
+}
