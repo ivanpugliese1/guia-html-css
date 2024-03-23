@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  background-color: red;
+  margin-top: 50px;
+  font-size: 20px;
+  text-align: center;
+  transition-property: color, background-color, left;
+  transition-duration: 1s;
+  transition-delay: 2s;
+  transition-timing-function: ease;
+  position: relative;
+  left: 0;
+}
+
+.box:hover {
+  background-color: blue;
+  color: #fff;
+}
+
+body:hover .box {
+  left: 200px;
+}

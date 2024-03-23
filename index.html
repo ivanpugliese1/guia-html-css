@@ -2,10 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Codificación universal -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <meta name="title" content="Guia HTML - CSS" />
+    <meta name="description" content="esta es mi guia para html y css" />
+    <meta name="keywords" content="html, css, desarrollo web, frontend" />
+    <meta name="author" content="Ivan Pugliese" />
+    <meta name="robots" content="" />
+    <link rel="icon" href="./images/favicon.png" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <!--Open Graph / Facebook - Linkedin -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pyaseguros.com/index.html" />
+    <meta property="og:title" content="Pugliese & Asociados | Seguro de Auto" />
+    <meta
+      property="og:description"
+      content="Te ofrecemos variedad de planes y beneficios para que tu auto este 100% protegido!"
+    />
+    <meta
+      property="og:image"
+      content="https://pyaseguros.com/images/auto-card-image.jpg"
+    />
+    <!--Twitter-->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="https://pyaseguros.com/index.html" />
+    <meta
+      property="twitter:title"
+      content="Pugliese & Asociados - Seguro de Auto"
+    />
+    <meta
+      property="twitter:description"
+      content="Te ofrecemos variedad de planes y beneficios para que tu auto este 100% protegido!"
+    />
+    <meta
+      property="twitter:image"
+      content="https://pyaseguros.com/images/auto-card-image.jpg"
+    />
   </head>
   <body>
     <h1>Guia de HTML</h1>
@@ -88,6 +122,7 @@
       <input type="datetime-local" />
       <input type="password" />
       <input type="range" />
+      <textarea name="" id="" cols="30" rows="10"></textarea>
     </form>
 
     <hr />
@@ -233,15 +268,218 @@
 
     <hr />
 
-    <h2>Ejercicio de CSS básico</h2>
-    <div class="card">
-      <h1>Ivan Pugliese</h1>
-      <h2>Desarrollador Web FullStack</h2>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est voluptatem
-        quas accusantium quod quisquam nulla fugit adipisci error quae sequi
-        dolorum, repudiandae, in hic laudantium maiores quasi ex repellat? Ad!
-      </p>
-    </div>
+    <form class="formulario" action="">
+      <h2>Formulario de contacto</h2>
+      <fieldset>
+        <legend>Información básica</legend>
+        <div>
+          <label for="name">Nombre Completo: </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="ingrese su nombre"
+          />
+        </div>
+
+        <div>
+          <label for="edad">Edad </label>
+          <input
+            type="text"
+            id="edad"
+            name="edad"
+            placeholder="ingrese su edad"
+          />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Información de contacto</legend>
+        <div>
+          <label>
+            Email :
+            <input type="email" name="email" placeholder="ingrese su correo" />
+          </label>
+        </div>
+
+        <div>
+          <label>
+            Telefono :
+            <input
+              type="tel"
+              name="telefono"
+              placeholder="ingrese su telefono"
+            />
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Información adicional</legend>
+        <div>
+          <label>
+            Lenguaje favorito
+            <select name="language">
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+              <option value="JS">JS</option>
+              <option value="REACT">React</option>
+              <option value="Tailwind">Tailwind</option>
+            </select>
+          </label>
+        </div>
+
+        <div>
+          <label>
+            Lenguaje favorito
+            <input list="language" />
+            <datalist id="language" name="language">
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+              <option value="JS">JS</option>
+              <option value="REACT">React</option>
+              <option value="Tailwind">Tailwind</option>
+            </datalist>
+          </label>
+        </div>
+      </fieldset>
+
+      <textarea name="comentarios" cols="30" rows="10"></textarea>
+
+      <div>
+        <label
+          >Acepto los <a href="terms.html">términos y condiciones</a>
+          <input class="checkbox" type="checkbox" />
+        </label>
+      </div>
+
+      <button>Enviar</button>
+    </form>
+
+    <hr />
+
+    <h2>Details y Summary</h2>
+    <details>
+      <summary>JavaScript</summary>
+      <p>JavaScript es un lenguaje de programación</p>
+    </details>
+    <details open>
+      <summary>JavaScript</summary>
+      <p>JavaScript es un lenguaje de programación</p>
+    </details>
+    <details>
+      <summary>JavaScript</summary>
+      <p>JavaScript es un lenguaje de programación</p>
+    </details>
+
+    <hr />
+
+    <h2>Tablas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Caracteristica</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Dato 1</td>
+          <td>Dato 1</td>
+          <td>Dato 1</td>
+        </tr>
+        <tr>
+          <td>Dato 1</td>
+          <td>Dato 1</td>
+          <td>Dato 1</td>
+        </tr>
+        <tr>
+          <td>Dato 1</td>
+          <td>Dato 1</td>
+          <td>Dato 1</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th>Total</th>
+          <td colspan="2">10</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <hr />
+
+    <h2>Audios, Videos y Iframes</h2>
+    <h3>Video</h3>
+    <video
+      src="./media/kenai.mp4"
+      controls
+      autoplay
+      muted
+      loop
+      poster="./images/mi-perfil.jpg"
+    >
+      <track
+        src="captions.vtt"
+        default
+        kind="captions"
+        srclang="es"
+        label="Español (latinoamerica)"
+      />
+    </video>
+
+    <h3>Audio</h3>
+    <audio src="./media/Feels-PatrickPatrikios.mp3" controls></audio>
+
+    <h3>Iframes</h3>
+    <iframe src="hola.html" frameborder="1"></iframe>
+    <br />
+    <iframe src="https://www.jonmircha.com" frameborder="1"></iframe>
+    <br />
+    <iframe src="https://www.facebook.com" frameborder="1"></iframe>
+    <br />
+    <iframe src="media/emmet-cheat-sheet.pdf" frameborder="1"></iframe>
+    <br />
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.6654003373211!2d-99.16814652076648!3d19.427021863930683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses-419!2smx!4v1625355039715!5m2!1ses-419!2smx"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+    <br />
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/F55LNTW3GE0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <hr />
+
+    <h2>TENER EN CUENTA SIEMPRE EL LAZY LOADING EN LAS IMAGENES</h2>
+
+    <hr />
+
+    <h2><a href="positions.html">Positions</a><h2>
+   
+    <hr />
+
+    <h2><a href="transitions.html">Transitions</a></h2>
+
+    <h2><a href="overflow.html">Overflow</a></h2>
+
+    <h2>Object Fit y Object Position</h2>
+    <img class="img-object" src="./images/mi-perfil.jpg" alt="">
+  
+
+    <a href="./flexbox/index.html">Flexbox</a>
   </body>
 </html>

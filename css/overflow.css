@@ -1,0 +1,37 @@
+.box {
+  width: 220px;
+  height: 220px;
+  background-color: red;
+  margin: auto;
+  margin-top: 50px;
+  overflow: auto; /* el mejor valor de esta propiedad */
+}
+
+/* 
+   overflow hidden 
+   overlfow clip
+   overflow-y y overflow-x
+*/
+
+/* 
+  Para el control del flujo de texto
+  white-space: normal
+  white-space: nowrap
+  white-space: pre : detecta los saltos de linea tal cual nosotros lo ponemos, como lo que esta en nuestro editor de codigo.
+  white-space: pre-wrap : si detecta que se esta por desbordar va hacia abajo. parecido al normal, pero respeta lo que yo quiero.
+*/
+
+/* 
+  text-overflow: ellipsis 3 puntitos, con clip se recorta
+  overflow: hidden , aparecen los 3 puntitos
+
+  word-break: normal usar esta
+  word-break: break-all me recorta las palabras, no usar.
+  word-break: auto-phrase, cuando salga investigarla.
+
+  word-wrap: rompe las palabras.
+  word-wrap: anywhere, las palabras largas se rompen si se desbordan.
+
+  text-wrap: balance, usar para que las palabras encajen de una forma estetica.
+  text-wrap: pretty, parecido pero si lo utilizo en un parrafo hace que es eviten las viudas( palabra suelta y se va para abajo ) y los huerfanos (palabras solas).
+*/
