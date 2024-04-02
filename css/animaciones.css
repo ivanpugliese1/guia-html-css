@@ -1,0 +1,195 @@
+html {
+  font-family: "Onest", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #111111;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.button__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.button-container:has(.btn-2) {
+  filter: drop-shadow(0px 0px 20px #48e);
+}
+
+.btn {
+  padding: 10px 40px;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 6px;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.btn-1 {
+  border: 1px solid #48e;
+  overflow: hidden;
+}
+
+.btn-1::before {
+  content: "";
+  background-color: #48e;
+  display: block;
+  width: 140%;
+  height: 200%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  transition: top 0.6s, left 0.6s;
+  top: 100%;
+  left: 30%;
+}
+
+.btn-1:hover::before {
+  top: -35%;
+  left: -15%;
+}
+
+.btn-2 {
+  border: 1px solid #fff3;
+  color: #fff3;
+}
+
+.btn:hover {
+  border-color: #48e;
+  color: rgba(159, 197, 255);
+  box-shadow: 0px 0px 6px #48e3, 0px 0px 16px #48e5;
+  text-shadow: 0px 0px 9px #48ee, 0px 0px 3px rgba(159, 197, 255, 0.454);
+  animation: parpadear 1s infinite alternate backwards;
+}
+
+@keyframes parpadear {
+  0% {
+    color: #fff3;
+    border: 1px solid #fff3;
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  25% {
+    border-color: #48e;
+    color: rgba(159, 197, 255);
+    box-shadow: 0px 0px 6px #48e3, 0px 0px 16px #48e5;
+    text-shadow: 0px 0px 9px #48ee, 0px 0px 3px rgba(159, 197, 255, 0.454);
+  }
+
+  30% {
+    color: #fff3;
+    border: 1px solid #fff3;
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  35% {
+    border-color: #48e;
+    color: rgba(159, 197, 255);
+    box-shadow: 0px 0px 6px #48e3, 0px 0px 16px #48e5;
+    text-shadow: 0px 0px 9px #48ee, 0px 0px 3px rgba(159, 197, 255, 0.454);
+  }
+
+  45% {
+    color: #fff3;
+    border: 1px solid #fff3;
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  60% {
+    border-color: #48e;
+    color: rgba(159, 197, 255);
+    box-shadow: 0px 0px 6px #48e3, 0px 0px 16px #48e5;
+    text-shadow: 0px 0px 9px #48ee, 0px 0px 3px rgba(159, 197, 255, 0.454);
+  }
+
+  75% {
+    color: #fff3;
+    border: 1px solid #fff3;
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  100% {
+    border-color: #48e;
+    color: rgba(159, 197, 255);
+    box-shadow: 0px 0px 6px #48e3, 0px 0px 16px #48e5;
+    text-shadow: 0px 0px 9px #48ee, 0px 0px 3px rgba(159, 197, 255, 0.454);
+  }
+}
+
+.text-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: space-evenly;
+  align-items: center;
+  filter: drop-shadow(0px 0px 15px #fff);
+}
+
+.text {
+  color: #fff;
+  letter-spacing: 3px;
+  animation: grow 1s both steps(7);
+  overflow: hidden;
+  position: relative;
+}
+
+.text::before {
+  content: "";
+  width: 2px;
+  height: 80%;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  border-radius: 4px;
+  animation: titilar 1s infinite alternate;
+}
+
+@keyframes grow {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes titilar {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* 
+Tenemos animation-timeline: scroll() 
+Y animation-timeline: view() cuando el elemento se ve
+con view-timeline: nombre block , este sirve en caso de que otro elemento dependa si se otro elemento se este viendo
+
+animation-range-start: cover 10%
+animation-range-end: cover 80%
+*/

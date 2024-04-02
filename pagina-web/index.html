@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <span class="header__logo"> Pugliese </span>
+      <input type="checkbox" id="open-menu" class="header__checkbox" />
+      <label for="open-menu" class="header__open-nav-button" role="button"
+        >=</label
+      >
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#">About</a></li>
+          <li class="header__nav-item"><a href="#">Porfolio</a></li>
+          <li class="header__nav-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="profile">
+      <div class="profile__wrapper">
+        <div class="profile__img-container">
+          <img
+            src="../images/mi-perfil.jpg"
+            alt="Imagen de perfil de Ivan"
+            class="profile__img"
+          />
+        </div>
+        <div class="profile__data-container">
+          <div class="profile__data">
+            <div class="profile__description">
+              <h1>¿Quien es Ivan Pugliese?</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Dignissimos natus inventore repudiandae corrupti velit eum
+                perferendis illum, nesciunt iure nam quo similique consequuntur,
+                quidem cupiditate placeat dolores explicabo, praesentium
+                consequatur!
+              </p>
+            </div>
+            <div class="profile__skills-container">
+              <h2>Skills</h2>
+              <ul>
+                <li class="profile__skill">
+                  <div class="load-bar">
+                    <div class="load-bar__bar bar--80">80%</div>
+                  </div>
+                  <span class="profile__skill-name">HTML</span>
+                </li>
+                <li class="profile__skill">
+                  <div class="load-bar">
+                    <div class="load-bar__bar bar--60">60%</div>
+                  </div>
+                  <span class="profile__skill-name">CSS</span>
+                </li>
+                <li class="profile__skill">
+                  <div class="load-bar">
+                    <div class="load-bar__bar bar--70">70%</div>
+                  </div>
+                  <span class="profile__skill-name">JavaScript</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="porfolio">
+      <h2 class="porfolio__title">Porfolio</h2>
+      <div class="porfolio__project-container">
+        <div class="porfolio__project">
+          <h3 class="porfolio__project-name">PROJECT</h3>
+        </div>
+        <div class="porfolio__project">
+          <h3 class="porfolio__project-name">PROJECT</h3>
+        </div>
+        <div class="porfolio__project">
+          <h3 class="porfolio__project-name">PROJECT</h3>
+        </div>
+        <div class="porfolio__project">
+          <h3 class="porfolio__project-name">PROJECT</h3>
+        </div>
+        <div class="porfolio__project">
+          <h3 class="porfolio__project-name">PROJECT</h3>
+        </div>
+        <div class="porfolio__project">
+          <h3 class="porfolio__project-name">PROJECT</h3>
+        </div>
+      </div>
+    </section>
+    <section class="form">
+      <h2 class="form__title">Contact</h2>
+      <form action="" class="form__form">
+        <div class="form__input-container">
+          <label>
+            Nombre Completo
+            <input type="text" placeholder="Ivan Pugliese" />
+          </label>
+        </div>
+        <div class="form__input-container">
+          <label>
+            Email
+            <input type="email" placeholder="Ingresa tu correo" />
+          </label>
+        </div>
+        <div class="form__input-container">
+          <label>
+            Telefono:
+            <input type="tel" placeholder="Ingresa tu telefono" />
+          </label>
+        </div>
+        <div class="form__input-container">
+          <label>
+            Deja tu comentario
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </label>
+        </div>
+        <div class="form__input-container">
+          <button>Enviar</button>
+        </div>
+      </form>
+    </section>
+    <footer>Desarrollado por Ivan Pugliese</footer>
+  </body>
+</html>

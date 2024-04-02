@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  flex-flow: row wrap;
+  border: 2px solid black;
+  justify-content: start;
+  justify-content: end;
+  justify-content: space-between; /* primer y utlimo elemento posicionados al final */
+  justify-content: space-around; /* separacion igual */
+  justify-content: space-evenly; /* separacion igual equitativamente, mejor que around, sin colapso de margenes */
+  justify-content: center; /* alineamos los items en el eje principal */
+  align-items: stretch; /* alineamos los items en el eje cruzado, stretch es el valor por defecto y estira los items si no tiene un alto o ancho definido segun el eje */
+  align-items: start; /* start deja que el contenido sea el original, no los estira, siempre segun el contenido., lo mismo con end pero al final, center al centro */
+  align-items: center;
+  align-items: baseline; /* se alinea en base a la direccion del texto */
+  /* align-content: center; /* se alinean todos en conjunto en el eje cruzado , para multiples lineas */
+  height: 500px;
+  gap: 20px;
+}
+
+.flex-item {
+  height: 100px;
+  background-color: red;
+  flex-shrink: 1; /* hasta donde se encojen los elementos */
+  flex-basis: 100px; /* lo maximo que te podes achicar antes de enojerte, definimos en direccion a la que apunta el elemento, no como min-width ni min-height, se calculan de forma de diferente, concentualmente funcionan igual, pero tratar de usar basis */
+}
+
+.flex-item:first-child {
+  order: 0; /* cambia el orden visual unicamente */
+  background-color: brown;
+  flex-grow: 4; /* del espacio disponible puede ocupar algo, no afecta la alineacion, SE ROMPE EN PEDAZOS, MANEJAMOS Y ADMINISTRAMOS COMO EL ESPACIO DISPONIBLE PUEDE SER OCUPADO POR LOS ITEMS */
+  align-self: center; /* funciona solo cuando usamos la propiedad align items */
+}
+
+.flex-item:last-child {
+  order: 0; /* cambia el orden visual unicamente */
+  background-color: brown;
+  /* flex-grow: 4; del espacio disponible puede ocupar algo, no afecta la alineacion, si tiene un width definido no sirve. */
+  flex-shrink: 3; /* se encojen 3 veces mas que los demas */
+}

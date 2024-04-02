@@ -1,0 +1,146 @@
+/* ---- Reset ----*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* HEADER -- SECTION */
+
+body {
+  background-color: #f80c;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  height: 100vh;
+  background-image: url("https://blogs.iadb.org/conocimiento-abierto/wp-content/uploads/sites/10/2022/02/%C2%BFBuscas-cursos-en-espan%CC%83ol-para-aprender-a-programar-Te-compartimos-estas-opciones-gratuitas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header__overlay {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0009;
+  position: absolute;
+}
+
+.header__item-container {
+  position: relative;
+  margin: auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+.header__img {
+  min-width: 200px;
+  max-width: 40%;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  margin-bottom: 1rem;
+}
+
+/* NAVBAR -- SECTION */
+
+.nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.nav__ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav__logo-container,
+.nav__ul-container {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.nav__link {
+  color: #f80;
+  text-decoration: none;
+  border-radius: 0;
+  padding: 10px;
+  transition: border 0.3s, border-radius 0.3s, outline 0.3s, outline-offset 0.3s;
+  outline: 0;
+  outline-offset: 0;
+}
+
+nav img {
+  width: 50px;
+}
+
+.nav__link:hover {
+  border-radius: 20px;
+  background-color: #f803;
+  outline: 2px solid #f809;
+  outline-offset: -5px;
+}
+
+.link--login {
+  background-color: #f80;
+  color: #fff;
+  border-radius: 20px;
+  padding: 8px 24px;
+  outline: none;
+}
+
+.link--login:hover {
+  background-color: #f809;
+  outline: none;
+}
+
+main {
+  max-width: 70%;
+  margin: auto;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bloque-contenedor">
+      <div class="bloque">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+        excepturi beatae tempore voluptatibus quia quae ipsum cumque
+        reprehenderit hic temporibus reiciendis aliquid veritatis, totam, enim
+        soluta itaque officia eligendi necessitatibus. Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Quibusdam, repellat, ea sequi
+        laudantium possimus consectetur velit laboriosam fugit saepe voluptas
+        vero? Fuga reiciendis eius dolorum esse. Hic impedit quaerat eum!
+      </div>
+      <div class="bloque">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+        excepturi beatae tempore voluptatibus quia quae ipsum cumque
+        reprehenderit hic temporibus reiciendis aliquid veritatis, totam, enim
+        soluta itaque officia eligendi necessitatibus. Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Quibusdam, repellat, ea sequi
+        laudantium possimus consectetur velit laboriosam fugit saepe voluptas
+        vero? Fuga reiciendis eius dolorum esse. Hic impedit quaerat eum!
+      </div>
+      <div class="bloque">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+        excepturi beatae tempore voluptatibus quia quae ipsum cumque
+        reprehenderit hic temporibus reiciendis aliquid veritatis, totam, enim
+        soluta itaque officia eligendi necessitatibus. Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Quibusdam, repellat, ea sequi
+        laudantium possimus consectetur velit laboriosam fugit saepe voluptas
+        vero? Fuga reiciendis eius dolorum esse. Hic impedit quaerat eum!
+      </div>
+    </div>
+    <img src="../images/mi-perfil.jpg" alt="" />
+    <div class="video-contenedor">
+      <video src="../media/kenai.mp4" controls muted autoplay></video>
+    </div>
+
+    <img
+      src="../images/kitten-small.png"
+      srcset="
+        ../images/kitten-small.png   400w,
+        ../images/kitten-medium.png  600w,
+        ../images/kitten-large.png  1000w
+      "
+      sizes="(max-width: 400px) 360px, (max-width: 600px) 600px, 900px"
+    />
+
+    <h2>Picture</h2>
+
+    <picture>
+      <source media="(max-width: 400px)" srcset="../images/kitten-small.png" />
+      <source media="(max-width: 600px)" srcset="../images/kitten-medium.png" />
+      <img src="../images/kitten-large.png" alt="" />
+    </picture>
+
+    <hr />
+
+    <h2><a href="./ejercicio.html">Ejercicio Holy Grail</a></h2>
+  </body>
+</html>

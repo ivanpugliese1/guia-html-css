@@ -27,3 +27,9 @@ body {
 body:hover .box {
   left: 200px;
 }
+
+/* tambien esta la propiedad steps */
+
+@media (prefers-reduced-motion: reduce) {
+  /* Poner las animaciones en mas pasos , desactivarlas, transiciones mas lentas*/
+}
